@@ -1,0 +1,136 @@
+<style>
+    /* ============================================================================================ */
+    .tarjetaBlCh_TarjetaConCheckDisplay{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-gap: 5px;
+    }
+	.tarjetaBlCh_TejetaConCheck {
+		width: 302px;
+		height: 40px;
+		left: 43.5px;
+		top: 145px;
+        overflow: visible;
+        filter: drop-shadow(1px 2px 5px rgba(39, 39, 39, 0.302));
+        background-color: rgba(254,254,255,1);
+		border-radius: 5px 5px 5px 5px;
+		border: 0;
+		overflow: hidden;
+        /* ------------------------------ */
+        display: grid;
+        grid-auto-columns: 30px 230px 40px;
+        grid-template-areas: 'btnCheck textt img';
+        justify-content: start;
+        justify-items: start;
+    }
+    /* ============================================================================================ */
+    .tarjetaBlCh_texto{
+        grid-area: textt;
+        padding: 5px;
+    }
+	.tarjetaBlCh_Obra_1 {
+		/* left: 28.5px;
+		top: 8px; */
+		overflow: visible;
+		width: 36px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(0,0,0,1);
+	}
+	.Direcci_n_de_la_obra___Cliente {
+		left: 28.5px;
+		top: 20px;
+		overflow: visible;
+		width: 117px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 9px;
+		color: rgba(87,87,87,1);
+	}
+    .tarjetaBlCh_imgUserHeader{
+        /* ----------- */
+        grid-area: img;
+        /* ----------- */
+        align-self: center;
+        justify-self: center;
+        background-image: url("/img/user.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+        border-radius: 50%;
+        box-shadow:0px 3px 6px rgba(0, 0, 0, 0.451);
+    }
+    /* ======================================================== */
+    .tarjetaBlCh_round label {       
+        grid-area: btnCheck; 
+        position: absolute;
+        background-color: #fff;
+        border: 1.5px solid blue;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+		left: 8.5px;
+		top: 9px;
+    }
+
+    .tarjetaBlCh_round label:after {  
+        grid-area: btnCheck;      
+        position: absolute;
+        border: 2px solid #fff;
+        border-top: none;
+        border-right: none;
+        content: "";
+        height: 3px;
+        width: 6px;
+        left: 4px;
+        top: 4px;
+        opacity: 0;
+        transform: rotate(-45deg);
+    }
+
+    .tarjetaBlCh_round input[type="checkbox"] {
+        grid-area: btnCheck;
+        visibility: hidden;
+    }
+
+    .tarjetaBlCh_round input[type="checkbox"]:checked + label {
+        grid-area: btnCheck;
+        background-color: blue;
+        border-color: blue;
+    }
+
+    .tarjetaBlCh_round input[type="checkbox"]:checked + label:after {
+        grid-area: btnCheck;
+        opacity: 1;
+    }
+    /* ======================================================== */
+</style>
+<div class="tarjetaBlCh_TarjetaConCheckDisplay">
+    <div class="tarjetaBlCh_TejetaConCheck">
+        <div class="tarjetaBlCh_texto">
+            <a href="infoUsuarios.html" style="width: 230px; position: absolute;">
+            <div class="tarjetaBlCh_Obra_1">
+                <span>Obra 1</span>
+            </div>
+            <div class="Direcci_n_de_la_obra___Cliente">
+                <span>Dirección de la obra - Cliente</span>
+            </div>
+            </a>
+        </div>
+        <div class="tarjetaBlCh_round">
+            <input type="checkbox" id="checkbox1" />
+            <label for="checkbox1"></label>
+        </div>
+        <div class="tarjetaBlCh_imgUserHeader"></div>
+    </div>
+</div>

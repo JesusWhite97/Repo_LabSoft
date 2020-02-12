@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="11.274" height="15.21" viewBox="0 0 11.274 15.21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #707070;
+      }
+    </style>
+  </defs>
+  <g id="Grupo_67" data-name="Grupo 67" transform="matrix(0.454, -0.891, 0.891, 0.454, -323.153, 200.652)">
+    <path id="Trazado_17" data-name="Trazado 17" class="cls-1" d="M0,0A2.5,2.5,0,0,1,2.5,2.5v8A2.5,2.5,0,0,1,0,13V0Z" transform="translate(327.378 206.03) rotate(90)"/>
+    <rect id="Rectángulo_48" data-name="Rectángulo 48" class="cls-1" width="3" height="4.5" rx="1" transform="translate(317.843 203.027) rotate(90)"/>
+    <rect id="Rectángulo_49" data-name="Rectángulo 49" class="cls-1" width="3" height="4.5" rx="1" transform="translate(328.643 203.022) rotate(90)"/>
+  </g>
+</svg>

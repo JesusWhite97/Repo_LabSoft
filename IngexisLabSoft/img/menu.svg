@@ -1,0 +1,18 @@
+<svg id="Menu_Hamburguesa" data-name="Menu Hamburguesa" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="21" viewBox="0 0 25 21">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="25" height="21" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repetir_cuadrícula_3" data-name="Repetir cuadrícula 3" clip-path="url(#clip-path)">
+    <g transform="translate(-9.5 -29)">
+      <line id="Línea_3" data-name="Línea 3" x2="25" transform="translate(9.5 30.5)" fill="none" stroke="#fff" stroke-width="3"/>
+    </g>
+    <g transform="translate(-9.5 -21)">
+      <line id="Línea_3-2" data-name="Línea 3" x2="25" transform="translate(9.5 30.5)" fill="none" stroke="#fff" stroke-width="3"/>
+    </g>
+    <g transform="translate(-9.5 -13)">
+      <line id="Línea_3-3" data-name="Línea 3" x2="25" transform="translate(9.5 30.5)" fill="none" stroke="#fff" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

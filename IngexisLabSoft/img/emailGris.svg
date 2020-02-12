@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Grupo_66" data-name="Grupo 66" transform="translate(-301 -149)">
+    <g id="Rectángulo_46" data-name="Rectángulo 46" class="cls-1" transform="translate(301 149)">
+      <rect class="cls-3" width="13" height="10" rx="2"/>
+      <rect class="cls-4" x="0.5" y="0.5" width="12" height="9" rx="1.5"/>
+    </g>
+    <path id="Trazado_16" data-name="Trazado 16" class="cls-1" d="M0,0,.537-.431,6.05,2.986" transform="translate(301.5 150.5)"/>
+    <line id="Línea_10" data-name="Línea 10" class="cls-2" x1="5" y2="3" transform="translate(307.5 150.5)"/>
+  </g>
+</svg>

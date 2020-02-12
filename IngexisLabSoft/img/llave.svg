@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="10" viewBox="0 0 24 10">
+  <defs>
+    <style>
+      .cls-1, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #707070;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke-linejoin: bevel;
+      }
+
+      .cls-3 {
+        stroke-linejoin: round;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Grupo_79" data-name="Grupo 79" transform="translate(-310 -601)">
+    <g id="Elipse_17" data-name="Elipse 17" class="cls-1" transform="translate(310 601)">
+      <circle class="cls-4" cx="5" cy="5" r="5"/>
+      <circle class="cls-5" cx="5" cy="5" r="4.5"/>
+    </g>
+    <g id="Rectángulo_58" data-name="Rectángulo 58" class="cls-2" transform="translate(319 605)">
+      <rect class="cls-4" width="15" height="2"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="14" height="1"/>
+    </g>
+    <g id="Rectángulo_59" data-name="Rectángulo 59" class="cls-3" transform="translate(329 608)">
+      <rect class="cls-4" width="4" height="2"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="3" height="1"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Registro Clientes</title>
+</head>
+
+
+<link rel="stylesheet" href="../css/main.css">
+<script src="../js/main.js"></script>
+<body>
+
+   <header id="encabezadoBotones">
+            <button id="regresar" onclick="goBack()">
+            </button>
+            <h2 id="titulo">
+                    Registro Clientes
+            </h2>
+            <button onclick="openNav()" id="menu">
+            </button>
+        </header> 
+<div class="contenedorCentradoResponsivo"> 
+                <div class="tarjetaBlanca">  
+<div id="tituloContenedor">
+        <div id="editarImagen">
+                        <input class="inputImg" id="inImg" type='file' accept=".png, .jpg, .jpeg, .png, .gif" onchange="readURL(this);"/>
+                        <label for="inImg"></label>
+                        <div id="blah"> </div>
+        </div>
+        
+    <input class="registro inputTexto mayus" type="text">
+    <p class="textoAyuda textoAyudaTitulo">Titulo</p>
+</div>
+                </div>
+
+
+<div class="tarjetaBlanca">
+        <input class="registro" type="text">
+        <p class="textoAyuda">Nombre de la empresa</p>
+        <input class="registro mayus" type="text">
+        <p class="textoAyuda">RFC</p>
+        <input class="registro" type="text">
+        <p class="textoAyuda">Dirección</p>
+        <div class="inputEnLinea">
+                <input class="registro" type="text">
+                <input class="registro" type="text">
+                <p class="textoAyuda">Codigo Postal</p>
+                <p class="textoAyuda">Colonia</p>
+        </div>
+        <input class="registro" type="text">
+        <p class="textoAyuda">Ciudad</p>
+    </div>
+
+        <div class="tarjetaBlanca">
+                <input class="registro" type="text">
+                <p class="textoAyuda">Nombre del Contacto</p>
+                <input class="registro" type="text">
+                <p class="textoAyuda">Número del Contacto</p>
+                <input class="registro" type="text">
+                <p class="textoAyuda">Email</p>
+        </div>
+        <div class="tarjetaBlanca">
+                        <form>
+                                <label class="titulo">No hay notas</label>
+                                <textarea class="registro" id="descripcion"></textarea>
+                        </form>
+                </div>
+                <button id="footerGuardar_Boton">Guardar</button> 
+        </div>
+        
+        <div id="myNav">
+        <div id="desenfoque"></div>
+        <div id="contenedorPrincipal">
+        <button class="principal" id="bClientes">Clientes</button>
+        <button class="principal" id="bObras">Obras</button>
+        <button class="principal" id="bUsuarios">Usuarios</button>
+        <button class="principal" id="bReportes">Reportes</button>
+        <button id="cerrarSesion">
+                Cerrar Sesión
+            </button>
+        </div>
+</div>
+</body>
+</html>

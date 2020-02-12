@@ -1,0 +1,31 @@
+<svg id="Componente_3_8" data-name="Componente 3 – 8" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0109fc;
+        stroke: #0109fc;
+        stroke-linecap: round;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Elipse_2" data-name="Elipse 2" class="cls-1">
+    <circle class="cls-3" cx="7" cy="7" r="7"/>
+    <circle class="cls-4" cx="7" cy="7" r="6.5"/>
+  </g>
+  <path id="Trazado_3" data-name="Trazado 3" class="cls-2" d="M5.4-1.051,1.5,5.5-.749,3.373" transform="translate(4.891 3.885) rotate(3)"/>
+</svg>

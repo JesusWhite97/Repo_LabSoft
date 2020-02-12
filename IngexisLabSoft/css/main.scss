@@ -1,0 +1,1307 @@
+$fuente: 'Segoe UI', sans-serif;
+$colorFuenteEncabezado:white;
+$colorFondoEncabezado: rgb(1,9,252);
+$colorFondoGradienteEncabezado: linear-gradient(127deg, rgba(1,9,252,1) 35%, rgba(12,149,255,1) 100%);
+$colorSombras:0px 3px 6px rgba(0, 0, 0, 0.451);
+$bordeCerrarSesión: 1px solid #FB3C4F;
+$colorBotonEliminar: rgb(255, 139, 139);
+$colorForm: #848484;
+$colorTextoInput: #605A77;
+$colorGradienteTarjetas:linear-gradient(to right,#0109FC,#0D86F7,#0D86F7, #07F3EC);
+
+
+body{
+    display: grid;
+    padding: 0%;
+    margin: 0%;
+    
+    
+}
+
+.mayus{
+    text-transform: uppercase;
+}
+#headerPrincipal{
+    position: fixed;
+    top: 0px;
+    z-index: 7;
+    display: grid;
+    grid-template-columns: auto 60px;
+    background:$colorFondoEncabezado;
+    background: $colorFondoGradienteEncabezado;
+    color: $colorFuenteEncabezado;
+    font-family: $fuente;
+    height: 60px;
+    width: 100%;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    box-shadow:$colorSombras;
+    h1{
+        font-size: 20px;
+        padding-left: 25px;
+        margin: 0px;
+    }
+    #imgUserHeader{
+        align-self: top;
+        justify-self: center;
+        background-image: url("../img/user.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        box-shadow:$colorSombras;
+        margin-top:10px;
+    }
+
+}
+#encabezadoBotones{
+    position: fixed;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+    background:$colorFondoEncabezado;
+    background: $colorFondoGradienteEncabezado;
+    color:$colorFuenteEncabezado;
+    font-family:$fuente;
+    height: 42px;
+    width: 100%;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    #titulo{
+        height: 42px;
+        width: 100%;
+        margin: 0px;
+        padding-top:3px;
+    }
+    button{
+        background-color: transparent;
+        height: 42px;
+        width: 100%;
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+      }
+    #regresar{
+        background-image: url("../img/back.svg");
+        cursor: pointer;
+    }
+    #menu{
+        background-image: url("../img/menu.svg");
+        cursor: pointer;
+        transition: 0.5s;
+    }
+  }
+
+ 
+
+#contenedorBuscador{
+    position: fixed;
+    z-index: 2;
+    top:42px;
+    display: grid;
+    grid-template-columns: auto 40px;
+    align-content: center;
+    align-items: center;
+
+    background: rgb(1,9,252);
+    background: linear-gradient(127deg, rgba(1,9,252,1) 35%, rgba(12,149,255,1) 100%);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    height: 61px;
+    width: 100%;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px 0px 15px 15px;
+}
+#buscarEntrada{
+    background-image: url("../img/Lupa.svg");
+    background-color:rgba(255, 255, 255, 0.794);
+    background-position: 10px 5px; /* Position the search icon */
+  background-repeat: no-repeat;
+  width: 80%; /* Full-width */
+  height: 27px;
+  font-size: 16px; /* Increase font-size */
+  padding: 0px; /* Add some padding */
+  margin: 12px;
+  padding-left: 34px;
+  -webkit-box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.16);
+-moz-box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.16);
+box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.16);
+border-radius: 15px;
+border: 0px;
+}
+#agregar{
+    height:100%;
+    border:0px;
+    background-color: transparent;
+    background-image: url("../img/agregar.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+#desenfoque{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+      /* Add the blur effect */
+        background-image: url("../img/principalFondo.jpg");
+        background-color: #ddd;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        filter: blur(6px);
+        -webkit-filter: blur(6px);
+
+        /* Full height */
+          
+
+}
+#desenfoque{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+      /* Add the blur effect */
+        background-image: url("../img/principalFondo.jpg");
+        background-color: #ddd;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        filter: blur(6px);
+        -webkit-filter: blur(6px);
+        /* Full height */     
+}
+#contenedorPrincipal{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: grid;
+    z-index: 2;
+    width: 100%;
+    top: 145px;
+    display: grid;
+    grid-template-rows: 60px 60px 60px 60px 1fr  ;
+    row-gap: 10px;
+    justify-items: center;
+    margin:0%;
+    margin-top: 30px;
+   
+    
+
+    .principal{
+        border:0px;
+        z-index: 1;
+        grid-column: 1 / span 1;
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        height: 53px;
+        width: 302px;
+        background-image: linear-gradient(to right,#0109FC,#0D86F7,#0D86F7, #07F3EC);
+        margin: 10px;
+        text-align: left;
+        padding-left: 20px;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.16);
+        -moz-box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.16);
+        box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.16);
+    }
+    #bClientes{
+        grid-row: 1 / span 1;
+    }
+    #bObras{
+        grid-row: 2 / span 1;
+    }
+    #bUsuarios{
+        grid-row: 3 / span 1;
+    }
+    #bReportes{
+        grid-row:  4/span 1;
+    }
+    #cerrarSesion {
+        z-index: 1;
+        grid-column: 1 / span 1;
+        grid-row:  5 / span 1;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        color: #FB3C4F;
+        height: 53px;
+        width: 302px;
+        border: 0px;
+        border-radius: 10px;   
+        background-color: white;
+        border: 1px solid #FB3C4F ;   
+        margin: 10px;
+        margin-top: 50px;
+        margin-bottom: 5%;;
+        padding-left: 20px;
+        box-shadow:0px 3px 6px rgba(0, 0, 0, 0.451);
+    }
+
+}
+.botonesEliminarImprimer{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+.footerImprimir_Boton {
+    justify-self: center;
+    align-self: center;
+    border:0px;
+    text-align: center;
+    font-family:'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: blue;
+    width: 145px;
+    height: 25px;
+    border-radius: 5px; 
+    background-color: #8682FF;
+    margin: 10%;
+    box-shadow:0px 3px 6px rgba(80, 6, 6, 0.451);       
+}
+#footerGuardar_Boton {
+    justify-self: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    color: rgba(255,255,255,1);
+    width: 314px;
+    height: 57px;
+    border: 0px;
+    border-radius: 20px;   
+    background-image: linear-gradient(to right,#0109FC, #0A92FC);    
+    margin: 20px 20px;
+    box-shadow:0px 3px 6px rgba(12, 19, 255, 0.451);
+}
+
+.footerEliminar_Boton {
+    justify-self: center;
+    align-self: center;
+    border:0px;
+    text-align: center;
+    font-family: $fuente;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: red;
+    width: 145px;
+    height: 25px;
+    border-radius: 5px; 
+    background-color: $colorBotonEliminar;
+    margin: 10%;
+    box-shadow:0px 3px 6px rgba(80, 6, 6, 0.451);       
+}
+.tarjetaBlanca{
+    max-width: 600px;
+    min-width: 600px;
+    
+    height: auto;
+    font-family: $fuente;
+    box-shadow: $colorSombras;
+    padding: 20px;
+
+    margin: 10px auto;
+
+    .tituloPagina{
+        margin: 10px auto;
+        color: #575757;
+
+
+    }
+    .subtituloPagina{
+        margin: 10px auto;
+        color: #848484;
+
+    }
+
+    .titulo{
+        width: 100%;
+        font-family: $fuente;
+        font-size: 13px;
+        font-weight: bold;
+        color:$colorForm;
+        margin-bottom: 1px;
+        padding-left: 5px;
+        
+    }
+    input{
+        pointer-events: none;
+        border:0px;
+        border-bottom: 2px solid $colorForm;
+        width: 100%;
+        font-family: $fuente;
+        font-weight: 800;
+        color: $colorTextoInput;
+        margin-bottom: 1px;
+    }
+    select{
+        pointer-events: none;
+        border:0px;
+        border-bottom: 2px solid $colorForm;
+        width: 100%;
+        font-family: $fuente;
+        font-weight: 800;
+        color: $colorTextoInput;
+        margin-bottom: 1px;
+    }
+    .registro{
+        pointer-events: auto !important;
+        background-color: #eee !important;
+        border-bottom: 2px solid $colorForm;
+    }
+    .textoAyuda{
+        font-family: $fuente;
+        font-size: 14px;
+        color: $colorForm;
+        margin-top: 1px;
+    }
+    #descripcion{
+        font-family: $fuente;
+        width: 100%;
+        height: 100px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        font-size: 13px;
+        resize: none;
+        border: 0px;
+    }
+    .inputEnLinea{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 0px 20px;
+    }
+    .inputBoton{
+        display: grid;
+        grid-template-columns:auto 40px ;
+        grid-template-rows: auto auto;
+    }
+    .botonInfo{
+        grid-row: 1 / span2;
+        grid-column: 2 /span 1;
+        background-color: transparent;
+        border: 0px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #telefono{
+        background-image: url("../img/telgris.svg");
+        background-repeat:no-repeat;
+        background-position: right;
+        
+    }
+    #email{
+        background-image: url("../img/emailGris.svg");
+        background-repeat:no-repeat;
+        background-position: right;
+        
+    }
+    #password{
+        background-image: url("../img/llave.svg");
+        background-repeat:no-repeat;
+        background-position: right;
+    }
+    .tituloBoton{
+        align-self: center;
+        height: 21px;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        background-color: rgba(255, 255, 255, 0.719);
+        border:0px;
+        color:#3100FF;
+        font-size: 13px;
+        border-radius: 10px;
+        box-shadow: $colorSombras;
+    }
+}
+#tituloContenedor{
+
+    
+    display: grid;
+    width: 600px;
+    height: 300px;
+    grid-template-rows: 1fr 50px;
+    justify-items: center;
+    font-family: $fuente;
+    color: $colorFuenteEncabezado;
+    box-shadow: $colorSombras;
+
+    #editarImagen{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 3;
+        width: 100%;
+        height: 100%;
+        display:grid;
+        grid-template-columns:1fr 50px;
+        grid-template-rows: 50px 1fr;
+
+        .inputImg{
+            display: none;
+        }
+        label{
+
+            width: 50px;
+            grid-column: 2/ span 1;
+            grid-row: 1 / span 1;
+            z-index: 4;
+            background-image: url("../img/upload.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 0px;
+            cursor: pointer;
+        }
+        div{
+            grid-column: 1/ span 2;
+            grid-row: 1 / span 2;
+            width: 100%; 
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            border:0px;
+        }
+
+
+    }
+
+    #tituloImagen{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 4;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/user.jpg");
+        background-size: cover;
+    }
+    #tituloInfo{
+        color: white;
+        text-shadow: $colorSombras;
+        background-color: transparent;
+        border: 0px;;
+        grid-column: 1 / span 1;
+        justify-self: center;
+        align-self: center;
+        grid-row: 2 / span 1;
+        width: 100%;
+        text-align: center;
+        font-size: 23px;
+    }
+    .tituloBoton{
+        align-self: center;
+        height: 21px;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        background-color: rgba(255, 255, 255, 0.719);
+        border:0px;
+        color:#3100FF;
+        font-size: 13px;
+        border-radius: 10px;
+        box-shadow: $colorSombras;
+    }
+    .inputTexto{
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+        border:0px;
+        border-bottom: 3px solid $colorForm;
+        width: 500px;
+        text-align: center;
+        font-family: $fuente;
+        font-weight: 600;
+        font-size: 27px;
+        color:#2f303a;
+        margin-bottom: 1px;
+        border-radius: 5px 5px 0px 0px;
+        
+        padding-bottom: 7px;
+        box-shadow: $colorSombras;
+      
+
+    }
+    .textoAyuda{
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 1;
+        font-family: $fuente;
+        font-size: 18px;
+        color: white;
+        margin-top: 1px;
+        text-shadow: 2px 2px 4px #000000;
+
+    }
+}
+
+.contenedorTarjetaUsuario{
+    display: grid;
+    grid-template-columns: 60px 1fr 50px ;
+    grid-template-rows: 1fr 1fr;
+    width: 90%;
+    height: 100px;
+    margin: 15px auto;
+    padding: 5px;
+    font-family: $fuente;
+    background-image: $colorGradienteTarjetas;
+    border-radius: 10px;
+    
+    a{
+    text-decoration: none;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    width: auto;
+    height: auto;
+    top:auto;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 50px 50px;
+
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+ 
+    padding-bottom: 5px;
+
+    }
+  .imgUsuario{
+      align-self: center;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    padding-left: 4px;
+    background-image: url("../img/user.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow:$colorSombras;
+    
+    
+  }
+  .tituloTarjetaUsuario{
+      align-self: flex-end;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    height: 24px;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding-left: 10px;
+    color: white;
+    font-size: 24px;
+      
+  }
+  .subtituloTarjetaUsuario{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding-left: 10px;
+    color: rgb(189, 189, 189);
+    font-size: 17px;
+  }
+  .subtitulosClientes{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    display: grid;
+    grid-template-rows: auto auto;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-items: flex-start;
+    height: 42px;
+    width: 100%;
+    margin: 0px;
+    padding-left: 5px;
+    color: rgb(206, 206, 206);
+    font-size: 12px;
+    h3{
+        margin: 0px;;
+    }
+  }
+  .botonInfo{
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0px;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    }
+    #telefono{
+       
+        grid-row: 1 / span 1;
+        grid-column: 3 /span 1;
+        background-image: url("../img/telefono.svg");
+        
+    }
+    #email{
+    
+        grid-row: 2 / span 1;
+        grid-column: 3 /span 1;
+        background-image: url("../img/email.svg");
+        
+    }
+
+}
+
+#contenedorGridResponsivo{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-gap:5px;
+}
+.contenedorCentradoResponsivo{
+    align-self: start;
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    overflow: hidden;
+
+}
+
+
+@media screen and (max-width:590px) {
+    #contenedorPrincipal{
+        margin-top: 80px;
+        grid-gap: 15px;
+    #cerrarSesion {
+        margin-top: 170px;
+    }
+}
+    .contenedorCentradoResponsivo{
+        margin-top: 42px;
+    }
+    .tarjetaBlanca{
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding-right:0px;
+        padding-left: 0px;
+        overflow: hidden;
+        padding: 0px;
+   
+
+        input{
+            
+            width: 90%;
+            height:25px;
+            margin-left: 5%;
+            margin-right: auto;
+            padding-left: 5px;
+        }
+        .textoAyuda{
+            width: 90%;
+            margin-left: 5%;
+            margin-right: auto;
+            text-align: center;
+            font-size: 16px;
+            
+        }
+        .inputEnLinea{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        #tituloContenedor{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+            
+
+            #editarImagen{
+                width: 100%;
+                height: auto;
+                grid-template-columns:1fr 60px;
+                grid-template-rows: 60px 1fr;
+
+            }
+                 
+            .textoAyudaTitulo{
+                margin-top: 0px;
+            }
+            div{
+                width: 90%;
+            }
+            input{
+            
+            width: 90%;
+            
+
+            }
+        }
+        
+
+    }
+
+  }
+  #tituloBoton{
+    align-self: center;
+    height: 21px;
+    background-color: rgba(255, 255, 255, 0.719);
+    border:0px;
+    color:#3100FF;
+    font-size: 13px;
+    border-radius: 10px;
+    box-shadow: $colorSombras;
+    margin: 10px auto;
+}
+
+.tarjetaBlCh_TejetaConCheck {
+    width: 302px;
+    height: 40px;
+    left: 43.5px;
+    top: 145px;
+    overflow: visible;
+    filter: drop-shadow(1px 2px 3px rgba(66, 66, 66, 0.246));
+    background-color: rgba(254,254,255,1);
+    border-radius: 5px 5px 5px 5px;
+    border: 0px;
+    overflow: hidden;
+    /* ------------------------------ */
+    display: grid;
+    grid-auto-columns: 30px 230px 40px;
+    grid-template-areas: 'btnCheck textt img';
+    justify-content: start;
+    justify-items: start;
+}
+/* ============================================================================================ */
+.tarjetaBlCh_texto{
+    grid-area: textt;
+    padding: 5px;
+}
+.tarjetaBlCh_Obra_1 {
+    /* left: 28.5px;
+    top: 8px; */
+    overflow: visible;
+    width: 36px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgba(0,0,0,1);
+}
+.Direcci_n_de_la_obra___Cliente {
+    left: 28.5px;
+    top: 20px;
+    overflow: visible;
+    width: 117px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    color: rgba(87,87,87,1);
+}
+.tarjetaBlCh_imgUserHeader{
+    /* ----------- */
+    grid-area: img;
+    /* ----------- */
+    align-self: center;
+    justify-self: center;
+    background-image: url("../img/user.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow:0px 3px 6px rgba(0, 0, 0, 0.451);
+}
+/* ======================================================== */
+.tarjetaBlCh_round label {       
+    grid-area: btnCheck; 
+    position: absolute;
+    background-color: #fff;
+    border: 1.5px solid blue;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    left: 8.5px;
+    top: 9px;
+}
+
+.tarjetaBlCh_round label:after {  
+    grid-area: btnCheck;      
+    position: absolute;
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 3px;
+    width: 6px;
+    left: 4px;
+    top: 4px;
+    opacity: 0;
+    transform: rotate(-45deg);
+}
+
+.tarjetaBlCh_round input[type="checkbox"] {
+    grid-area: btnCheck;
+    visibility: hidden;
+}
+
+.tarjetaBlCh_round input[type="checkbox"]:checked + label {
+    grid-area: btnCheck;
+    background-color: blue;
+    border-color: blue;
+}
+
+.tarjetaBlCh_round input[type="checkbox"]:checked + label:after {
+    grid-area: btnCheck;
+    opacity: 1;
+}
+// ===============================================================
+
+.CuadritoDeAbajo{
+    width: 340px;
+    height: 255px;
+    display: grid;
+    
+    
+    color: rgb(88, 88, 88);
+    border: 2px gray;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px auto;
+    box-shadow: $colorSombras;
+}
+.tituloCuadritoAbajo{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 24px;
+    margin: 5px;
+    
+}
+.CentarCuadritoDeAbajo{
+    justify-self: center;
+    align-self: start;
+    
+}
+.tarjetaBlCh_TarjetaConCheckDisplay{
+    display: grid;
+    grid-template-columns: 305px;
+    grid-gap: 5px 5px;
+    /* ============================= */
+    width: 320px;
+    height: 200px;
+    overflow: auto;
+}
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+.centrar{
+    display: grid;
+    justify-items: center;
+}
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+
+#myNav{
+    display: grid;
+    height: 0%;
+    width: 100%;
+    position:absolute; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    left: 0px;
+    top: 38px;
+    transition: 0.5s;
+    overflow-y: hidden;
+    
+}
+
+//============================Login================================
+#contenedorLogin{
+    width: 100%;
+    height: 100vh;
+    display:grid;
+    grid-template-rows: 300px 1fr 1fr;
+    #contenedorTituloLogin{
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        background-image: $colorFondoGradienteEncabezado;
+        font-family: $fuente;
+        box-shadow: $colorSombras;
+        #imgLogin{
+            width: 150px;
+            height: 150px;
+            background-image: url("../img/Logo.svg");
+            background-size: cover;
+            margin: 20px auto;
+            
+
+        }
+        #tituloLogin{
+            margin:10px auto;
+            color:white;
+            text-align: center;
+
+        }
+        #imgUser{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: $colorSombras;
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+            background-image: url("../img/user.jpg");
+            background-size: cover;
+            background-position: center;
+            margin: 20px auto;
+
+
+        }
+    }
+    #contenedorInputLogin{
+        background-color: rgba(239, 239, 239, 0.459);
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 2;
+        justify-items: center;
+       
+        #inputLogin{
+            color: #BFBDBD;
+            align-self: end;
+            width: 302px;
+            height: 50px;
+            margin: 20px auto;
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+            border: 1px solid #0C6EEF;
+            border-radius: 5px;
+            padding-left: 5px;
+            font-size: 20px;
+            text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.185);
+            box-shadow: $colorSombras;
+        }
+
+        #botonLogin{
+            align-self: top;
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+            border: 1px solid #0C6EEF;
+            border-radius: 5px;
+            margin:10px;
+
+
+        }
+    }
+// ============================================================================
+    }
+    .contenedorTarjetaAzul{
+        width: 300px;
+        height: 215px;
+        background-image: linear-gradient(to right,#0109FC, #07F3EC);
+        border-radius: 10px;
+        filter: drop-shadow(1px 2px 5px rgba(39, 39, 39, 0.302));
+        display: grid;
+        grid-gap: 10px;
+        margin: 10px;
+    }
+    
+    .contenidoTarjetaAzul{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr;
+        color: white;
+        font-family: Segoe UI;
+        justify-self: center;
+        justify-items: center;
+        font-size:14px;
+        .registroPrueba{
+            width: 80px;
+            background-color: rgba(255, 255, 255, 0.596);
+            pointer-events: auto;
+            border:0px;
+            border-radius: 10px;
+            
+        }
+        .noVisible{
+            border:0px;
+            background-color: transparent;
+            pointer-events: none;
+        }
+        .visible{
+            width: 80px;
+            color: white;
+            font-size:14px;
+            border:0px;
+            background-color: transparent;
+            pointer-events: none;
+        }
+    }
+    .hederTarjetaAzul{
+        width: 300px;
+        margin: 2px;
+        display: grid;
+        grid-gap: 5px;
+        position: relative;
+        grid-template-areas: "btnCheck titulo Img";
+        justify-self: start;
+        align-self: start;
+        font-size:24px;
+        padding-left:5px;
+    }
+    .textoTarjetaAzul{
+        grid-area: titulo;
+        color: white;
+        font-family: Segoe UI;
+    }
+    .imgTarjetaAzul{
+        grid-area: Img;
+        align-self: center;
+        justify-self: center;
+        background-image: url("../img/user.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+		width: 45px;
+		height: 45px;
+        border-radius: 50%;
+        box-shadow:0px 3px 6px rgba(0, 0, 0, 0.451);
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .TarjetaAzulBtnModificar_registrar{
+        background-color: white;
+        opacity: 70%;
+        border: 0px;
+        border-radius: 5px;  
+        font-weight: bold;   
+        font-family: Lato;
+        color: #7F1AE1;
+        font-size: 14px;
+        width: 250px;
+        height: 25px;
+        margin: 10px;
+    }
+    #TarjetaAzulBotones, #TarjetaAzulBotonesDos, #TarjetaAzulBotonesTres{
+        display: none;
+        grid-template-columns: 1fr 1fr;
+
+    .TarjetaAzulBtnGuardar{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        background-color: white;
+        opacity: 70%;
+        border: 0px;
+        border-radius: 5px;  
+        font-weight: bold;   
+        font-family: Lato;
+        color: #7F1AE1;
+        font-size: 14px;
+        width: 100px;
+        height: 25px;
+        margin: 10px;
+        margin-left: 0px;;
+    }
+    .TarjetaAzulBtnCancelar{
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        float: left;
+        background-color: white;
+        opacity: 70%;
+        border: 0px;
+        border-radius: 5px;  
+        font-weight: bold;   
+        font-family: Lato;
+        color: #7F1AE1;
+        font-size: 14px;
+        width: 100px;
+        height: 25px;
+        margin: 10px;
+    }
+}
+    /* ======================================================== */
+    .TarjetaAzul_round{
+        grid-area: btnCheck;
+    }
+    .TarjetaAzul_round label {  
+        position: absolute;
+        background-color: #fff;
+        opacity: 80%;
+        border: 1.5px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 22px;
+        width: 22px;
+		left: 3px;
+		top: 6px;
+    }
+
+    .TarjetaAzul_round label:after { 
+        position: absolute;
+        border: 4px solid blue;
+        border-top: none;
+        border-right: none;
+        content: "";
+        height: 6px;
+        width: 12px;
+        left: 3px;
+        top: 5px;
+        opacity: 0;
+        transform: rotate(-45deg);
+    }
+
+    .TarjetaAzul_round input[type="checkbox"] {
+        /* visibility: hidden; */
+        display: none;
+        pointer-events: none;
+    }
+
+    .TarjetaAzul_round input[type="checkbox"]:checked + label {
+        background-color: white;
+        border-color: white;
+        pointer-events: none;
+    }
+
+    .TarjetaAzul_round input[type="checkbox"]:checked + label:after {
+        opacity: 1;
+        pointer-events: none;
+    }
+    /* ======================================================== */
+
+    #contenedorModal, #contenedorModalEliminado{
+        position: fixed;
+        top:450px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: 0%;
+        width: 100%;
+        z-index: 4; /* Sit on top */
+        left: 0px;
+        top: 38px;
+        transition: 0.5s;
+        overflow-y: hidden;
+    #fondoModal{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        z-index:2;
+        width: 100%;
+        height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            filter: blur(12px);
+            -webkit-filter: blur(12px);  
+    }
+    .modal{
+        z-index:3;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+		width: 338px;
+		height: 373px;
+		background-color: rgba(255,255,255,0.78);
+		border-radius: 33px 33px 33px 33px;
+        border: 0px;
+        margin: 40px auto;
+    }
+        
+        .textoModal{
+            align-self: end;
+            font-size: 18px;
+            color: rgb(3, 3, 85);
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 1;
+            font-family: $fuente;
+            margin: 0px;
+
+        }
+        .eliminarBotonModal{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        width: 95px;
+        height: 31px;
+		text-align: center;
+		font-family: Lato;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+        color: red;
+        background-color: #ff8b8b;
+        -webkit-box-shadow: 0px 3px 6px rgba(80, 6, 6, 0.451);
+        box-shadow: 0px 3px 6px rgba(80, 6, 6, 0.451);
+        border-radius: 5px 5px 5px 5px;
+		border:  0px;
+
+        }
+        .guardarBotonModal{
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+            width: 95px;
+            height: 31px;
+            text-align: center;
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            color: rgb(38, 0, 255);
+            background-color: #8baaff;
+            -webkit-box-shadow: 0px 3px 6px rgba(6, 20, 80, 0.451);
+            box-shadow: 0px 3px 6px rgba(6, 13, 80, 0.451);
+            border-radius: 5px 5px 5px 5px;
+            border:  0px;
+    
+            }
+        .cancelarBotonModal{
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
+        color: rgba(238,0,0,1);
+        width: 95px;
+		height: 31px;
+		background-color: rgba(255,255,255,0);
+		border-radius: 5px 5px 5px 5px;
+        border:  1px solid rgba(255,1,1,1);
+        -webkit-box-shadow: 0px 3px 6px rgba(80, 6, 6, 0.451);
+        box-shadow: 0px 3px 6px rgba(80, 6, 6, 0.451);
+        }
+        .OK{
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(0, 44, 238);
+        width: 95px;
+		height: 31px;
+        background-color: rgba(255,255,255,0);
+        margin: 0px auto;
+        border:0px;
+        }
+    }
+    
+
+
+
+    
+
+    
+
+

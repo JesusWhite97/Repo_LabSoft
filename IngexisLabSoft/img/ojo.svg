@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.156" height="15.228" viewBox="0 0 19.156 15.228">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #707070;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #707070;
+      }
+
+      .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: bevel;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Grupo_78" data-name="Grupo 78" transform="translate(-313.923 -598.372)">
+    <g id="Elipse_15" data-name="Elipse 15" class="cls-1" transform="translate(319.5 601.988)">
+      <circle class="cls-4" cx="4" cy="4" r="4"/>
+      <circle class="cls-5" cx="4" cy="4" r="3.5"/>
+    </g>
+    <path id="Trazado_28" data-name="Trazado 28" class="cls-2" d="M5880.247-781.622l-.094-.3c.006-.015,2.57-7.569,8.943-7.569s8.9,7.709,8.9,7.709" transform="translate(-5565.622 1388.36)"/>
+    <path id="Trazado_29" data-name="Trazado 29" class="cls-2" d="M.56,7.3S3.115.856,9.459.851,18.415,7.3,18.415,7.3" transform="translate(332.99 613.952) rotate(180)"/>
+    <g id="Elipse_16" data-name="Elipse 16" class="cls-3" transform="translate(323 602.988)">
+      <circle class="cls-4" cx="2" cy="2" r="2"/>
+      <circle class="cls-5" cx="2" cy="2" r="1.5"/>
+    </g>
+  </g>
+</svg>
