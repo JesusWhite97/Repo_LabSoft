@@ -29,3 +29,10 @@ use databaseingexis;
 --     end if;
 -- end
 --======================================--
+-- create FUNCTION id_by_correo(correo varchar(50)) returns int
+-- begin
+--     declare salida int;
+--     select log_usuarios.id_usuario into salida from log_usuarios where log_usuarios.correo = correo;
+--     return salida;
+-- end
+--======================================--

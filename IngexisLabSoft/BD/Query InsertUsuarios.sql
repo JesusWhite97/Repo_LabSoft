@@ -6,3 +6,5 @@ INSERT usuarios values(last_insert_id(), 'jesus', '', 'villavicencio', 'osuna', 
 INSERT Log_usuarios (correo, contra, img_log) values ('Rtapiz@gmail.com', '1234', 'prueba/no img');
 INSERT usuarios values(last_insert_id(), 'raul', 'jesus', 'ruiz', 'tapiz', '6121123422', 'laboratorista', 'aaaa111111bccddd23', 'aaaa111111b2c', 'forjadores', 'tecnologico,terminal', '512', 'forjadores', '23098');
 --======================================--
+-- call agregaUsuario( 'Meli@gmail.com', '1234', 'noImg', 'Melisa', 'samanta', 'ceseña', 'rodrigez', '6121458795', 'laboratorista 2', 'aaaa111111bccddd23', 'aaaa111111b2c', 'pitaya', 'mango,semilla', '564', 'indeco', '23071')
+--======================================--
