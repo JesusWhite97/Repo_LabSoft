@@ -1,3 +1,4 @@
+--CREATE database databaseingexis;
 --use databaseingexis;
 --======================================--
 -- create table Log_usuarios(
@@ -15,9 +16,9 @@
 --     Segund_ape      varchar(30),
 --     --informacion---------------
 --     Num_contacto    varchar(30),
---     puesto          VARCHAR(10),
---     Curp            varchar(18),
---     rfc             varchar(13),
+--     puesto          varchar(25),
+--     Curp            varchar(18), -- 4 letras, 6 numeros, 1 letra, 2 letras, 3 letras, 1 num o letra, 1 numero
+--     rfc             varchar(13), -- 4 0 3 letras, 6 numeros, 3 num o letras
 --     --direccion-----------------
 --     calleP          varchar(20),
 --     Entrecalles     varchar(50),
