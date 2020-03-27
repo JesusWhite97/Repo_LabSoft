@@ -1,2 +1,0 @@
-SELECT id_muestra, obras.id_obra, resultado, obras.fecha_muestreo, fecha_prueba, imagen, obras.direccion, obras.titulo, clinetes.nom_contacto
-FROM `muesta`, `obras`, `info_usuario`, `clinetes` where clinetes.id_clinete = obras.id_cliente AND obras.id_obra = muesta.id_obra and obras.id_usuario = info_usuario.usuario_id and `fecha_prueba` >= '2012-08-06' ORDER by fecha_prueba ASC
