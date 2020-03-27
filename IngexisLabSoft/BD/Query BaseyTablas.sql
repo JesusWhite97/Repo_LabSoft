@@ -1,9 +1,10 @@
 --CREATE database databaseingexis;
---use databaseingexis;
+--======================================--
+use databaseingexis;
 --======================================--
 -- create table Log_usuarios(
 --     id_usuario      int             primary key     not null    AUTO_INCREMENT,
---     correo          varchar(50),
+--     correo          varchar(50)     unique,
 --     contra          varchar(20),
 --     img_log         VARCHAR(100)
 -- );
