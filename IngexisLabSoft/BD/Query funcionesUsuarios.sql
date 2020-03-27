@@ -1,0 +1,31 @@
+use databaseingexis;
+--======================================--
+-- CREATE FUNCTION prueba1(entrada varchar(100)) returns varchar(25)
+-- BEGIN
+--     DECLARE salida varchar(25); 
+--     set salida = CONCAT('holis ', entrada);
+--     return salida;
+-- END
+--======================================--
+-- CREATE FUNCTION  correoExistencte(correo varchar(50)) returns varchar(5)
+-- BEGIN
+--     DECLARE respuesta bit;
+--     select if(log_usuarios.correo, 1, 0) into respuesta from log_usuarios where log_usuarios.correo = correo;
+--     if respuesta = 1 then
+--         return 'true';
+--     else
+--         return 'false';
+--     end if;
+-- END
+--======================================--
+-- CREATE FUNCTION verificaContraseña(correo varchar(50), contraseña varchar(20)) returns varchar(5)
+-- begin
+--     declare respuesta bit;
+--     select if(log_usuarios.contra, 1, 0) into respuesta from log_usuarios where log_usuarios.correo = correo and log_usuarios.contra = contraseña;
+--     if respuesta = 1 then
+--         return 'true';
+--     else
+--         return 'false';
+--     end if;
+-- end
+--======================================--
