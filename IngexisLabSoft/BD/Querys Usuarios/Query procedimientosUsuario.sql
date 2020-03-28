@@ -53,12 +53,12 @@ use databaseingexis;
 -- create PROCEDURE mod_contra(in correo varchar(50), in anterior varchar(20), in nueva varchar(20))
 -- begin 
 --     declare aprobado varchar(5);
---     select verificaContraseña(correo, anterior) into aprobado;
+--     select verificaContra(correo, anterior) into aprobado;
 --     if aprobado = 'true' then
 --         update log_usuarios set log_usuarios.contra = nueva where log_usuarios.correo = correo;
---         select aprobado;
+--         select 'Aprobado';
 --     else
---         select aprobado;
+--         select 'No aprobado';
 --     end if;
 -- end
 --======================================--
@@ -69,19 +69,19 @@ use databaseingexis;
 --     update usuarios set usuarios.puesto = puesto where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
--- create procedure mod_nombre(in correo varchar(50), in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
--- begin
---     declare id_usuario int;
---     select id_by_correo(correo) into id_usuario;
---     update usuarios
---     set 
---         usuarios.nombre1 = nom1,
---         usuarios.nombre2 = nom2,
---         usuarios.Primer_ape = ape1,
---         usuarios.Segund_ape = ape2
---     WHERE 
---         usuarios.id_usuario = id_usuario;
--- end
+create procedure mod_nombre(in correo varchar(50), in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
+begin
+    declare id_usuario int;
+    select id_by_correo(correo) into id_usuario;
+    update usuarios
+    set 
+        usuarios.nombre1 = nom1,
+        usuarios.nombre2 = nom2,
+        usuarios.Primer_ape = ape1,
+        usuarios.Segund_ape = ape2
+    WHERE 
+        usuarios.id_usuario = id_usuario;
+end
 --======================================--
 -- create procedure mod_curp(in correo varchar(50), in curp varchar(18))
 -- begin
@@ -92,9 +92,16 @@ use databaseingexis;
 --======================================--
 -- create procedure mod_rfc(in correo varchar(50), in rfc varchar(13))
 -- begin
-    -- declare id_usuario int;
-    -- select id_by_correo(correo) into id_usuario;
+--     declare id_usuario int;
+--     select id_by_correo(correo) into id_usuario;
 --     update usuarios set usuarios.rfc = rfc where usuarios.id_usuario = id_usuario;
+-- end
+--======================================--
+-- create procedure mod_apodo(in correo varchar(50), in apodo varchar(13))
+-- begin
+--     declare id_usuario int;
+--     select id_by_correo(correo) into id_usuario;
+--     update usuarios set usuarios.apodo = rfc where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
 -- create procedure mod_Telefono(in correo varchar(50), in telefono varchar(30))
@@ -133,14 +140,14 @@ use databaseingexis;
 -- end
 --======================================--
 -- pendientes:
---      informacion de logeo                ✓✓✓✓✓✓✓
---      agregar usuarios                    ✓✓✓✓✓✓✓
---      eliminar usuarios                   ✓✓✓✓✓✓✓
---      datos para tajetas usuarios         ✓✓✓✓✓✓✓
---      buscador tarjetas usuarios          ✓✓✓✓✓✓✓
---      datos especifico para tarjeta       ✓✓✓✓✓✓✓
---      datos del usuario especifico        ✓✓✓✓✓✓✓
---      modificar usuarios (por seccion)    ✓✓✓✓✓✓✓
+--      informacion de logeo                ✓✓✓✓✓✓✓✓
+--      agregar usuarios                    ✓✓✓✓✓✓✓✓
+--      eliminar usuarios                   ✓✓✓✓✓✓✓✓
+--      datos para tajetas usuarios         ✓✓✓✓✓✓✓✓
+--      buscador tarjetas usuarios          ✓✓✓✓✓✓✓✓
+--      datos especifico para tarjeta       ✓✓✓✓✓✓✓✓
+--      datos del usuario especifico        ✓✓✓✓✓✓✓✓
+--      modificar usuarios (por seccion)    ✓✓✓✓✓✓✓✓
 --          +contraseña         ✓
 --          +puesto             ✓
 --          +datos_Nombre       ✓
@@ -148,4 +155,5 @@ use databaseingexis;
 --          +RFC                ✓
 --          +telefono           ✓
 --          +direccion          ✓
+--          +apodo              ✓
 --======================================--

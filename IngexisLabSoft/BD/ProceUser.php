@@ -169,8 +169,48 @@
             //============================
         }
         //#####################################################
+        public function ModContra($correo, $anterior, $nueva){
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $salida = "";
+            $resultado = mysqli_query($mysqli, "CALL mod_contra('".$correo."', '".$anterior."', '".$nueva."');");
+            $rows = $resultado->fetch_array();
+            $salida = $rows[0];
+            //============================
+            return $salida;
+            $resultado->free();
+            //============================
+        }
         //#####################################################
+        public function ModPuesto($correo, $puesto){
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $query = "CALL mod_puesto('".$correo."', '".$puesto."')";
+            if($mysqli->query($query)===TRUE){
+                return "Modificacion Existoso.";
+            }else{
+                return "NO se puedo Modificar el registro: ".$mysqli->error;
+            }     
+            //============================
+        }
         //#####################################################
+        public function ModNombre($correo, $nom1, $nom2, $ape1, $ape2){
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $query = "CALL mod_nombre('".$correo."', '".$nom1."', '".$nom2."', '".$ape1."', '".$ape2."')";
+            if($mysqli->query($query)===TRUE){
+                return "Modificacion Existoso.";
+            }else{
+                return "NO se puedo Modificar el registro: ".$mysqli->error;
+            }     
+            //============================
+        }
         //#####################################################
     }
     // ========================================================
@@ -198,8 +238,17 @@
     // $prueba = new procedimientos_BD();
     // $salida = $prueba->TrajetaEspecifica('Rtapiz@gmail.com');
     // var_dump($salida);
-    $prueba = new procedimientos_BD();
-    $salida = $prueba->VistaPorUsuario('jesus120190240.8@gmail.com');
-    var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->VistaPorUsuario('jesus120190240.8@gmail.com');
+    // var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->ModContra('jesus120190240.8@gmail.com', 'holis', 'holaMundo');
+    // var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->ModPuesto('jesus120190240.8@gmail.com', 'Jefe De Laboratorio');
+    // var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->ModNombre('Rtapiz@gmail.com', 'raul', 'jesus', 'ruiz', 'tapiz');
+    // var_dump($salida);
     // ========================================================
 ?>
