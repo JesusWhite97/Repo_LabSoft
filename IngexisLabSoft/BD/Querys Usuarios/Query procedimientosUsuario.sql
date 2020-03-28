@@ -67,13 +67,84 @@ use databaseingexis;
 --     update usuarios set usuarios.puesto = puesto where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
+-- create procedure mod_nombre(in id_usuario int, in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
+-- begin
+--     update usuarios
+--     set 
+--         usuarios.nombre1 = nom1,
+--         usuarios.nombre2 = nom2,
+--         usuarios.Primer_ape = ape1,
+--         usuarios.Segund_ape = ape2
+--     WHERE 
+--         usuarios.id_usuario = id_usuario;
+-- end
+--======================================--
+-- create procedure mod_nombre(in id_usuario int, in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
+-- begin
+--     update usuarios
+--     set 
+--         usuarios.nombre1 = nom1,
+--         usuarios.nombre2 = nom2,
+--         usuarios.Primer_ape = ape1,
+--         usuarios.Segund_ape = ape2
+--     WHERE 
+--         usuarios.id_usuario = id_usuario;
+-- end
+--======================================--
+-- create procedure mod_curp(in id_usuario int, in curp varchar(18))
+-- begin
+--     update usuarios set usuarios.Curp = curp where usuarios.id_usuario = id_usuario;
+-- end
+--======================================--
+-- create procedure mod_rfc(in id_usuario int, in rfc varchar(13))
+-- begin
+--     update usuarios set usuarios.rfc = rfc where usuarios.id_usuario = id_usuario;
+-- end
+--======================================--
+-- create procedure mod_Telefono(in id_usuario int, in telefono varchar(30))
+-- begin
+--     update usuarios set usuarios.Num_contacto = telefono where usuarios.id_usuario = id_usuario;
+-- end
+--======================================--
+-- create procedure mod_direccion(
+--     in id_usuario int, 
+--     in calle varchar(20), 
+--     in entre varchar(50), 
+--     in numCasa varchar(10), 
+--     in col varchar(20), 
+--     in codigoP varchar(10)
+--     )
+-- begin
+--     update usuarios 
+--     set 
+--         usuarios.calleP = calle,
+--         usuarios.Entrecalles = entre,
+--         usuarios.numero = numCasa,
+--         usuarios.colonia = col,
+--         usuarios.cod_postal = codigoP
+--     where 
+--         usuarios.id_usuario = id_usuario;
+-- end
+--======================================--
+-- create procedure buscar_tar_usuarios(in apodo varchar(60))
+-- begin
+--     select * from dat_tar_Usuarios where dat_tar_usuarios.apodo like concat('%', apodo, '%');
+-- end
+--======================================--
 -- pendientes:
---      modificar usuarios (por seccion)
---          +contraseña         ✓✓✓✓✓
---          +puesto             ✓✓✓✓✓
---          +datos_Nombre
---          +curp
---          +RFC
---          +telefono
---          +direccion
+--      informacion de logeo                ✓✓✓✓✓✓✓
+--      agregar usuarios                    ✓✓✓✓✓✓✓
+--      eliminar usuarios                   ✓✓✓✓✓✓✓
+--      datos para tajetas usuarios         ✓✓✓✓✓✓✓
+--      buscador tarjetas usuarios          ✓✓✓✓✓✓✓
+--      datos especifico para tarjeta       ✓✓✓✓✓✓✓
+--      datos del usuario especifico        ✓✓✓✓✓✓✓
+--      modificar usuarios (por seccion)    ✓✓✓✓✓✓✓
+--          +contraseña         ✓
+--          +puesto             ✓
+--          +datos_Nombre       ✓
+--          +curp               ✓
+--          +RFC                ✓
+--          +telefono           ✓
+--          +direccion          ✓
 --======================================--

@@ -18,7 +18,7 @@ use databaseingexis;
 --     apodo           varchar(60),
 --     --informacion---------------
 --     Num_contacto    varchar(30),
---     puesto          varchar(25),
+--     puesto          enum('Jefe De Laboratorio', 'Administrador', 'Laboratorista 1', 'Laboratorista 2'),
 --     Curp            varchar(18), -- 4 letras, 6 numeros, 1 letra, 2 letras, 3 letras, 1 num o letra, 1 numero
 --     rfc             varchar(13), -- 4 0 3 letras, 6 numeros, 3 num o letras
 --     --direccion-----------------
