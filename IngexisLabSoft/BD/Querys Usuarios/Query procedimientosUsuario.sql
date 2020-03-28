@@ -62,7 +62,18 @@ use databaseingexis;
 --     end if;
 -- end
 --======================================--
+-- create procedure mod_puesto(in id_usuario int, in puesto varchar(25))
+-- begin
+--     update usuarios set usuarios.puesto = puesto where usuarios.id_usuario = id_usuario;
+-- end
+--======================================--
 -- pendientes:
---     modificar usuarios (por seccion)
---     modificar contraseña
+--      modificar usuarios (por seccion)
+--          +contraseña         ✓✓✓✓✓
+--          +puesto             ✓✓✓✓✓
+--          +datos_Nombre
+--          +curp
+--          +RFC
+--          +telefono
+--          +direccion
 --======================================--
