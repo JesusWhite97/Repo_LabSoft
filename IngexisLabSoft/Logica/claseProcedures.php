@@ -30,7 +30,7 @@
         if($_POST["metodo"]=="registrar"){
             $json[] =
                 [
-                    'mensajeDatos'   => $procedimientos->agregarUsuario($_POST["email"],$_POST["password"],$_POST["img"],$_POST["titulo"],$_POST["puesto"],$_POST["primerNombre"],$_POST["segundoNombre"],$_POST["apellidoPaterno"],$_POST["apellidoMaterno"],$_POST["rfc"],$_POST["curp"],$_POST["telefono"],$_POST["ciudad"],$_POST["calle"],$_POST["entre"],173,$_POST["cp"],$_POST["colonia"])
+                    // 'mensajeDatos'   => $procedimientos->agregarUsuario($_POST["email"],$_POST["password"],$_POST["img"],$_POST["titulo"],$_POST["puesto"],$_POST["primerNombre"],$_POST["segundoNombre"],$_POST["apellidoPaterno"],$_POST["apellidoMaterno"],$_POST["rfc"],$_POST["curp"],$_POST["telefono"],$_POST["ciudad"],$_POST["calle"],$_POST["entre"],173,$_POST["cp"],$_POST["colonia"])
                 ];
                 $jsonString = json_encode($json);
                 echo $jsonString;
@@ -38,7 +38,7 @@
         if($_POST["metodo"]=="agregarClientes"){
             $json[] =
                 [
-                    'mensajeDatos'   => $procedimientos->agregarClientes($_POST["titulo"],$_POST["empresa_nombre"],$_POST["rfc"],$_POST["direccion"],$_POST["cod_postal"],$_POST["col"],$_POST["ciudad"],$_POST["nom_contacto"],$_POST["num_contacto"],$_POST["notas"],$_POST["fecha_reg"],$_POST["img"])
+                    // 'mensajeDatos'   => $procedimientos->agregarClientes($_POST["titulo"],$_POST["empresa_nombre"],$_POST["rfc"],$_POST["direccion"],$_POST["cod_postal"],$_POST["col"],$_POST["ciudad"],$_POST["nom_contacto"],$_POST["num_contacto"],$_POST["notas"],$_POST["fecha_reg"],$_POST["img"])
                 ];
                 $jsonString = json_encode($json);
                 echo $jsonString;
@@ -94,7 +94,7 @@
         if($_POST["metodo"]=="modificarmuestra"){
             $json[] =
                 [
-                    'mensajeDatos'   => $procedimientos->modificarmuestra($_POST["id_obra"],$_POST["fecha_prueba"])
+                    // 'mensajeDatos'   => $procedimientos->modificarmuestra($_POST["id_obra"],$_POST["fecha_prueba"])
                 ];
                 $jsonString = json_encode($json);
                 echo $jsonString;

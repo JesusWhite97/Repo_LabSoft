@@ -1,17 +1,10 @@
 use databaseingexis;
 --======================================--
--- CREATE FUNCTION prueba1(entrada varchar(100)) returns varchar(25)
+-- CREATE FUNCTION  correoExistente(correo varchar(50)) returns varchar(5)
 -- BEGIN
---     DECLARE salida varchar(25); 
---     set salida = CONCAT('holis ', entrada);
---     return salida;
--- END
---======================================--
--- CREATE FUNCTION  correoExistencte(correo varchar(50)) returns varchar(5)
--- BEGIN
---     DECLARE respuesta bit;
---     select if(log_usuarios.correo, 1, 0) into respuesta from log_usuarios where log_usuarios.correo = correo;
---     if respuesta = 1 then
+--     DECLARE respuesta int;
+--     select log_usuarios.id_usuario into respuesta from log_usuarios where log_usuarios.correo = correo;
+--     if respuesta != 1 then
 --         return 'true';
 --     else
 --         return 'false';
