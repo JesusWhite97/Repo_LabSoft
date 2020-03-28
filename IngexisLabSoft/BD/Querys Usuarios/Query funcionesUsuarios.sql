@@ -4,18 +4,18 @@ use databaseingexis;
 -- BEGIN
 --     DECLARE respuesta int;
 --     select log_usuarios.id_usuario into respuesta from log_usuarios where log_usuarios.correo = correo;
---     if respuesta != 1 then
+--     if respuesta != 0 then
 --         return 'true';
 --     else
 --         return 'false';
 --     end if;
 -- END
 --======================================--
--- CREATE FUNCTION verificaContraseña(correo varchar(50), contraseña varchar(20)) returns varchar(5)
+-- CREATE FUNCTION verificaContra(correo varchar(50), contraseña varchar(20)) returns varchar(5)
 -- begin
---     declare respuesta bit;
---     select if(log_usuarios.contra, 1, 0) into respuesta from log_usuarios where log_usuarios.correo = correo and log_usuarios.contra = contraseña;
---     if respuesta = 1 then
+--     declare respuesta int;
+--     select log_usuarios.id_usuario into respuesta from log_usuarios where log_usuarios.correo = correo and log_usuarios.contra = contraseña;
+--     if respuesta != 0 then
 --         return 'true';
 --     else
 --         return 'false';

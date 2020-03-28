@@ -50,7 +50,7 @@ use databaseingexis;
 --     SELECT * from dat_usuarios where dat_usuarios.correo = correo;
 -- end
 --======================================--
--- create PROCEDURE mod_contraseña(in correo varchar(50), in anterior varchar(20), in nueva varchar(20))
+-- create PROCEDURE mod_contra(in correo varchar(50), in anterior varchar(20), in nueva varchar(20))
 -- begin 
 --     declare aprobado varchar(5);
 --     select verificaContraseña(correo, anterior) into aprobado;
@@ -62,13 +62,17 @@ use databaseingexis;
 --     end if;
 -- end
 --======================================--
--- create procedure mod_puesto(in id_usuario int, in puesto varchar(25))
+-- create procedure mod_puesto(in correo varchar(50), in puesto varchar(25))
 -- begin
+--     declare id_usuario int;
+--     select id_by_correo(correo) into id_usuario;
 --     update usuarios set usuarios.puesto = puesto where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
--- create procedure mod_nombre(in id_usuario int, in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
+-- create procedure mod_nombre(in correo varchar(50), in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
 -- begin
+--     declare id_usuario int;
+--     select id_by_correo(correo) into id_usuario;
 --     update usuarios
 --     set 
 --         usuarios.nombre1 = nom1,
@@ -79,35 +83,30 @@ use databaseingexis;
 --         usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
--- create procedure mod_nombre(in id_usuario int, in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
+-- create procedure mod_curp(in correo varchar(50), in curp varchar(18))
 -- begin
---     update usuarios
---     set 
---         usuarios.nombre1 = nom1,
---         usuarios.nombre2 = nom2,
---         usuarios.Primer_ape = ape1,
---         usuarios.Segund_ape = ape2
---     WHERE 
---         usuarios.id_usuario = id_usuario;
+--     declare id int;
+--     select id_by_correo(correo) into id;
+--     update usuarios set usuarios.Curp = curp where usuarios.id_usuario = id;
 -- end
 --======================================--
--- create procedure mod_curp(in id_usuario int, in curp varchar(18))
+-- create procedure mod_rfc(in correo varchar(50), in rfc varchar(13))
 -- begin
---     update usuarios set usuarios.Curp = curp where usuarios.id_usuario = id_usuario;
--- end
---======================================--
--- create procedure mod_rfc(in id_usuario int, in rfc varchar(13))
--- begin
+    -- declare id_usuario int;
+    -- select id_by_correo(correo) into id_usuario;
 --     update usuarios set usuarios.rfc = rfc where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
--- create procedure mod_Telefono(in id_usuario int, in telefono varchar(30))
+-- create procedure mod_Telefono(in correo varchar(50), in telefono varchar(30))
 -- begin
+--     declare id_usuario int;
+--     select id_by_correo(correo) into id_usuario;
 --     update usuarios set usuarios.Num_contacto = telefono where usuarios.id_usuario = id_usuario;
 -- end
+-- call mod_telefono('jesus120190240.8@gmail.com', '6121671121')
 --======================================--
 -- create procedure mod_direccion(
---     in id_usuario int, 
+--     in correo varchar(50),
 --     in calle varchar(20), 
 --     in entre varchar(50), 
 --     in numCasa varchar(10), 
@@ -115,6 +114,8 @@ use databaseingexis;
 --     in codigoP varchar(10)
 --     )
 -- begin
+--     declare id_usuario int;
+--     select id_by_correo(correo) into id_usuario;
 --     update usuarios 
 --     set 
 --         usuarios.calleP = calle,

@@ -5,8 +5,8 @@ use databaseingexis;
 --     log_usuarios.img_log as 'img',
 --     usuarios.apodo as 'apodo',
 --     usuarios.puesto as 'puesto',
---     usuarios.Num_contacto as numero,
---     log_usuarios.correo as correo
+--     usuarios.Num_contacto as 'numero',
+--     log_usuarios.correo as 'correo'
 -- from 
 --     log_usuarios, 
 --     usuarios 
