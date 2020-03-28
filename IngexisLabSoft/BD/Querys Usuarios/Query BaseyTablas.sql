@@ -15,6 +15,7 @@ use databaseingexis;
 --     nombre2         varchar(20),
 --     Primer_ape      varchar(30),
 --     Segund_ape      varchar(30),
+--     apodo           varchar(60),
 --     --informacion---------------
 --     Num_contacto    varchar(30),
 --     puesto          varchar(25),
