@@ -1,35 +1,35 @@
 use databaseingexis;
 --======================================--
 -- create procedure inf_log(in correo varchar(50))
---     select correo, img_log from log_usuarios where log_usuarios.correo = correo;
+--     select usuarios.apodo, log_usuarios.img_log from log_usuarios, usuarios where usuarios.id_usuario = log_usuarios.id_usuario and log_usuarios.correo = correo;
 --======================================--
-create PROCEDURE agregaUsuario(
-    in correo       varchar(50), 
-    in contra       varchar(20), 
-    in img          varchar(100),
-    ---------------------------
-    in nom1         varchar(20),
-    in nom2         varchar(20),
-    in ape1         varchar(30),
-    in ape2         varchar(30),
-    in apodo        varchar(60),
-    in num          varchar(30),
-    in puest        varchar(25),
-    in curp         varchar(18),
-    in rfc          varchar(13),
-    in calleP       varchar(20),
-    in entre        varchar(50),
-    in numcasa      varchar(10),
-    in colonia      varchar(20),
-    in codPostal    varchar(20)
-)
-BEGIN
-    INSERT Log_usuarios (log_usuarios.correo, log_usuarios.contra, log_usuarios.img_log) values (correo, contra, img);
-    if apodo = '' then
-        set apodo = CONCAT(nom1, ' ', nom2);
-    end if;
-    INSERT usuarios values(last_insert_id(), nom1, nom2, ape1, ape2, apodo, num, puest, curp, rfc, calleP, entre, numcasa, colonia, codPostal);
-END
+-- create PROCEDURE agregaUsuario(
+--     in correo       varchar(50), 
+--     in contra       varchar(20), 
+--     in img          varchar(100),
+--     ---------------------------
+--     in nom1         varchar(20),
+--     in nom2         varchar(20),
+--     in ape1         varchar(30),
+--     in ape2         varchar(30),
+--     in apodo        varchar(60),
+--     in num          varchar(30),
+--     in puest        varchar(25),
+--     in curp         varchar(18),
+--     in rfc          varchar(13),
+--     in calleP       varchar(20),
+--     in entre        varchar(50),
+--     in numcasa      varchar(10),
+--     in colonia      varchar(20),
+--     in codPostal    varchar(20)
+-- )
+-- BEGIN
+--     INSERT Log_usuarios (log_usuarios.correo, log_usuarios.contra, log_usuarios.img_log) values (correo, contra, img);
+--     if apodo = '' then
+--         set apodo = CONCAT(nom1, ' ', nom2);
+--     end if;
+--     INSERT usuarios values(last_insert_id(), nom1, nom2, ape1, ape2, apodo, num, puest, curp, rfc, calleP, entre, numcasa, colonia, codPostal);
+-- END
 --======================================--
 -- create PROCEDURE eliminar_usuario(in correo varchar(50))
 -- begin
@@ -45,7 +45,24 @@ END
 -- create PROCEDURE Targeta_Especifica_Usuario(in correo varchar(50))
 --     select * from dat_tar_Usuarios where correo = dat_tar_Usuarios.correo;
 --======================================--
+-- create PROCEDURE vista_por_usuario(in correo varchar(50))
+-- begin
+--     SELECT * from dat_usuarios where dat_usuarios.correo = correo;
+-- end
+--======================================--
+-- create PROCEDURE mod_contraseña(in correo varchar(50), in anterior varchar(20), in nueva varchar(20))
+-- begin 
+--     declare aprobado varchar(5);
+--     select verificaContraseña(correo, anterior) into aprobado;
+--     if aprobado = 'true' then
+--         update log_usuarios set log_usuarios.contra = nueva where log_usuarios.correo = correo;
+--         select aprobado;
+--     else
+--         select aprobado;
+--     end if;
+-- end
+--======================================--
 -- pendientes:
---     vista especifica de usuario
 --     modificar usuarios (por seccion)
+--     modificar contraseña
 --======================================--
