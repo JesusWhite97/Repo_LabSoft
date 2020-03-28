@@ -31,3 +31,5 @@ use databaseingexis;
 --     FOREIGN key(id_usuario) REFERENCES Log_usuarios(id_usuario)
 -- );
 --======================================--
+
+
