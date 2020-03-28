@@ -35,10 +35,14 @@ use databaseingexis;
 --     DELETE from log_usuarios where log_usuarios.correo = correo;
 -- end
 --======================================--
+-- create PROCEDURE listaTargetaUsuario()
+--     select * from dat_tar_Usuarios;
+--======================================--
+-- create PROCEDURE Targeta_Especifica_Usuario(in correo varchar(50))
+--     select * from dat_tar_Usuarios where correo = dat_tar_Usuarios.correo;
 --======================================--
 -- pendientes:
 --     targeta usuarios
---     vista completa de usuario
+--     vista especifica de usuario
 --     modificar usuarios (por seccion)
---     eliminar usuario
 --======================================--

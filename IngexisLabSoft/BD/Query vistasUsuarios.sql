@@ -1,0 +1,14 @@
+use databaseingexis;
+--======================================--
+-- CREATE VIEW dat_tar_Usuarios AS
+-- select 
+--     log_usuarios.img_log as 'img',
+--     CONCAT(usuarios.nombre1, ' ', usuarios.Primer_ape ) as 'nombre',
+--     usuarios.puesto as 'puesto',
+--     usuarios.Num_contacto as numero,
+--     log_usuarios.correo as correo
+-- from 
+--     log_usuarios, 
+--     usuarios 
+-- where log_usuarios.id_usuario = usuarios.id_usuario;
+--======================================--
