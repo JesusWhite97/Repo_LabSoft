@@ -69,19 +69,19 @@ use databaseingexis;
 --     update usuarios set usuarios.puesto = puesto where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
-create procedure mod_nombre(in correo varchar(50), in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
-begin
-    declare id_usuario int;
-    select id_by_correo(correo) into id_usuario;
-    update usuarios
-    set 
-        usuarios.nombre1 = nom1,
-        usuarios.nombre2 = nom2,
-        usuarios.Primer_ape = ape1,
-        usuarios.Segund_ape = ape2
-    WHERE 
-        usuarios.id_usuario = id_usuario;
-end
+-- create procedure mod_nombre(in correo varchar(50), in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
+-- begin
+--     declare id_usuario int;
+--     select id_by_correo(correo) into id_usuario;
+--     update usuarios
+--     set 
+--         usuarios.nombre1 = nom1,
+--         usuarios.nombre2 = nom2,
+--         usuarios.Primer_ape = ape1,
+--         usuarios.Segund_ape = ape2
+--     WHERE 
+--         usuarios.id_usuario = id_usuario;
+-- end
 --======================================--
 -- create procedure mod_curp(in correo varchar(50), in curp varchar(18))
 -- begin

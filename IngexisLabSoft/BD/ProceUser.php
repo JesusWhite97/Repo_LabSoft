@@ -212,6 +212,21 @@
             //============================
         }
         //#####################################################
+        public function Modcurp($correo, $curp){
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $query = "CALL mod_curp('".$correo."', '".$curp."')";
+            if($mysqli->query($query)===TRUE){
+                return "Modificacion Existoso.";
+            }else{
+                return "NO se puedo Modificar el registro: ".$mysqli->error;
+            }     
+            //============================
+        }
+        //#####################################################
+        //#####################################################
     }
     // ========================================================
     // $prueba = new procedimientos_BD();
@@ -249,6 +264,9 @@
     // var_dump($salida);
     // $prueba = new procedimientos_BD();
     // $salida = $prueba->ModNombre('Rtapiz@gmail.com', 'raul', 'jesus', 'ruiz', 'tapiz');
+    // var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->Modcurp('Rtapiz@gmail.com', 'cccc111111bccddd23');
     // var_dump($salida);
     // ========================================================
 ?>
