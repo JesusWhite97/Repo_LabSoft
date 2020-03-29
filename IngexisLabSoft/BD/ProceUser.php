@@ -226,6 +226,84 @@
             //============================
         }
         //#####################################################
+        public function ModRFC($correo, $rfc){
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $query = "CALL mod_rfc('".$correo."', '".$rfc."')";
+            if($mysqli->query($query)===TRUE){
+                return "Modificacion Existoso.";
+            }else{
+                return "NO se puedo Modificar el registro: ".$mysqli->error;
+            }     
+            //============================
+        }
+        //#####################################################
+        public function ModApodo($correo, $apodo){
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $query = "CALL mod_apodo('".$correo."', '".$apodo."')";
+            if($mysqli->query($query)===TRUE){
+                return "Modificacion Existoso.";
+            }else{
+                return "NO se puedo Modificar el registro: ".$mysqli->error;
+            }     
+            //============================
+        }
+        //#####################################################
+        public function ModTelefono($correo, $telefono){
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $query = "CALL mod_Telefono('".$correo."', '".$telefono."')";
+            if($mysqli->query($query)===TRUE){
+                return "Modificacion Existoso.";
+            }else{
+                return "NO se puedo Modificar el registro: ".$mysqli->error;
+            }     
+            //============================
+        }
+        //#####################################################
+        public function ModDireccion($correo, $calle, $entre, $numCasa, $col, $codP)
+        {
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $query = "CALL mod_direccion('".$correo."', '".$calle."', '".$entre."', '".$numCasa."', '".$col."', '".$codP."')";
+            if($mysqli->query($query)===TRUE){
+                return "Modificacion Existoso.";
+            }else{
+                return "NO se puedo Modificar el registro: ".$mysqli->error;
+            }     
+            //============================
+        }
+        //#####################################################
+        public function Buscar_tarjetas_usuarios($apodo)
+        {
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $salida = array();
+            $resultado = mysqli_query($mysqli, "call buscar_tar_usuarios('".$apodo."')");
+            while ($rows = $resultado->fetch_assoc())
+            {
+                $salida[] = [
+                    "img"       => $rows["img"],
+                    "apodo"     => $rows["apodo"],
+                    "puesto"    => $rows["puesto"],
+                    "numero"    => $rows["numero"],
+                    "correo"    => $rows["correo"]
+                ];
+            }
+            return $salida;
+            $resultado->free();
+        }
         //#####################################################
     }
     // ========================================================
@@ -267,6 +345,21 @@
     // var_dump($salida);
     // $prueba = new procedimientos_BD();
     // $salida = $prueba->Modcurp('Rtapiz@gmail.com', 'cccc111111bccddd23');
+    // var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->ModRFC('Rtapiz@gmail.com', 'cccc111111b2c');
+    // var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->ModApodo('Rtapiz@gmail.com', 'RTapiz');
+    // var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->ModTelefono('Rtapiz@gmail.com', '6124587766');
+    // var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->ModDireccion('Rtapiz@gmail.com', 'forjadores', 'tec y la terminal', '101', 'Progreso', '24058');
+    // var_dump($salida);
+    // $prueba = new procedimientos_BD();
+    // $salida = $prueba->Buscar_tarjetas_usuarios('s');
     // var_dump($salida);
     // ========================================================
 ?>

@@ -101,7 +101,7 @@ use databaseingexis;
 -- begin
 --     declare id_usuario int;
 --     select id_by_correo(correo) into id_usuario;
---     update usuarios set usuarios.apodo = rfc where usuarios.id_usuario = id_usuario;
+--     update usuarios set usuarios.apodo = apodo where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
 -- create procedure mod_Telefono(in correo varchar(50), in telefono varchar(30))
@@ -136,7 +136,9 @@ use databaseingexis;
 --======================================--
 -- create procedure buscar_tar_usuarios(in apodo varchar(60))
 -- begin
---     select * from dat_tar_Usuarios where dat_tar_usuarios.apodo like concat('%', apodo, '%');
+--     select * from dat_tar_Usuarios 
+--     where 
+--     dat_tar_usuarios.apodo like concat('%', apodo, '%') or dat_tar_usuarios.correo like concat('%', apodo, '%');
 -- end
 --======================================--
 -- pendientes:
