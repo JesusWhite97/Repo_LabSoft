@@ -31,5 +31,22 @@ use databaseingexis;
 --     FOREIGN key(id_usuario) REFERENCES Log_usuarios(id_usuario)
 -- );
 --======================================--
+-- create table clientes(
+--     id_clientes     int             primary key     not null,
+--     titulo          char(60),
+--     nom_empr        char(60),
+--     rfc             varchar(13), -- 4 0 3 letras, 6 numeros, 3 num o letras
+--     direc           varchar(100),
+--     cod_pos         varchar(10),
+--     colonia         varchar(20),
+--     ciudad          varchar(30),
+--     nombre_contac   varchar(100),
+--     numero_contac   varchar(30),
+--     email           varchar(50),
+--     nota            text,
+--     img             varchar(100),
+--     fecha_reg       date
+-- );
+--======================================--
 
 
