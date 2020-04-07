@@ -50,7 +50,7 @@ use databaseingexis;
 --     SELECT * from dat_usuarios where dat_usuarios.correo = correo;
 -- end
 --======================================--
--- create PROCEDURE mod_contra(in correo varchar(50), in anterior varchar(20), in nueva varchar(20))
+-- create PROCEDURE Usuario_mod_contra(in correo varchar(50), in anterior varchar(20), in nueva varchar(20))
 -- begin 
 --     declare aprobado varchar(5);
 --     select verificaContra(correo, anterior) into aprobado;
@@ -62,14 +62,14 @@ use databaseingexis;
 --     end if;
 -- end
 --======================================--
--- create procedure mod_puesto(in correo varchar(50), in puesto varchar(25))
+-- create procedure Usuario_mod_puesto(in correo varchar(50), in puesto varchar(25))
 -- begin
 --     declare id_usuario int;
 --     select id_by_correo(correo) into id_usuario;
 --     update usuarios set usuarios.puesto = puesto where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
--- create procedure mod_nombre(in correo varchar(50), in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
+-- create procedure Usuario_mod_nombre(in correo varchar(50), in nom1 varchar(20), in nom2 varchar(20), in ape1 varchar(30), in ape2 varchar(30))
 -- begin
 --     declare id_usuario int;
 --     select id_by_correo(correo) into id_usuario;
@@ -83,36 +83,42 @@ use databaseingexis;
 --         usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
--- create procedure mod_curp(in correo varchar(50), in curp varchar(18))
+-- create procedure Usuario_mod_curp(in correo varchar(50), in curp varchar(18))
 -- begin
 --     declare id int;
 --     select id_by_correo(correo) into id;
 --     update usuarios set usuarios.Curp = curp where usuarios.id_usuario = id;
 -- end
 --======================================--
--- create procedure mod_rfc(in correo varchar(50), in rfc varchar(13))
+-- create procedure Usuario_mod_rfc(in correo varchar(50), in rfc varchar(13))
 -- begin
 --     declare id_usuario int;
 --     select id_by_correo(correo) into id_usuario;
 --     update usuarios set usuarios.rfc = rfc where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
--- create procedure mod_apodo(in correo varchar(50), in apodo varchar(13))
+-- create procedure Usuario_mod_apodo(in correo varchar(50), in apodo varchar(13))
 -- begin
 --     declare id_usuario int;
 --     select id_by_correo(correo) into id_usuario;
 --     update usuarios set usuarios.apodo = apodo where usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
--- create procedure mod_Telefono(in correo varchar(50), in telefono varchar(30))
+-- create procedure Usuario_mod_Telefono(in correo varchar(50), in telefono varchar(30))
 -- begin
 --     declare id_usuario int;
 --     select id_by_correo(correo) into id_usuario;
 --     update usuarios set usuarios.Num_contacto = telefono where usuarios.id_usuario = id_usuario;
 -- end
--- call mod_telefono('jesus120190240.8@gmail.com', '6121671121')
 --======================================--
--- create procedure mod_direccion(
+-- create procedure Usuario_mod_Img(in correo varchar(50), in img varchar(100))
+-- begin
+--     declare id_usuario int;
+--     select id_by_correo(correo) into id_usuario;
+--     update log_usuarios set log_usuarios.img_log = img where usuarios.id_usuario = id_usuario;
+-- end
+--======================================--
+-- create procedure Usuario_mod_direccion(
 --     in correo varchar(50),
 --     in calle varchar(20), 
 --     in entre varchar(50), 
@@ -142,14 +148,14 @@ use databaseingexis;
 -- end
 --======================================--
 -- pendientes:
---      informacion de logeo                ✓✓✓✓✓✓✓✓
---      agregar usuarios                    ✓✓✓✓✓✓✓✓
---      eliminar usuarios                   ✓✓✓✓✓✓✓✓
---      datos para tajetas usuarios         ✓✓✓✓✓✓✓✓
---      buscador tarjetas usuarios          ✓✓✓✓✓✓✓✓
---      datos especifico para tarjeta       ✓✓✓✓✓✓✓✓
---      datos del usuario especifico        ✓✓✓✓✓✓✓✓
---      modificar usuarios (por seccion)    ✓✓✓✓✓✓✓✓
+--      informacion de logeo                ✓✓✓✓✓✓✓✓✓
+--      agregar usuarios                    ✓✓✓✓✓✓✓✓✓
+--      eliminar usuarios                   ✓✓✓✓✓✓✓✓✓
+--      datos para tajetas usuarios         ✓✓✓✓✓✓✓✓✓
+--      buscador tarjetas usuarios          ✓✓✓✓✓✓✓✓✓
+--      datos especifico para tarjeta       ✓✓✓✓✓✓✓✓✓
+--      datos del usuario especifico        ✓✓✓✓✓✓✓✓✓
+--      modificar usuarios (por seccion)    ✓✓✓✓✓✓✓✓✓
 --          +contraseña         ✓
 --          +puesto             ✓
 --          +datos_Nombre       ✓
@@ -158,4 +164,5 @@ use databaseingexis;
 --          +telefono           ✓
 --          +direccion          ✓
 --          +apodo              ✓
+--          +img                ✓
 --======================================--

@@ -175,7 +175,7 @@
             $mysqli = $conex->conexion();
             //============================
             $salida = "";
-            $resultado = mysqli_query($mysqli, "CALL mod_contra('".$correo."', '".$anterior."', '".$nueva."');");
+            $resultado = mysqli_query($mysqli, "CALL Usuario_mod_contra('".$correo."', '".$anterior."', '".$nueva."');");
             $rows = $resultado->fetch_array();
             $salida = $rows[0];
             //============================
@@ -189,7 +189,7 @@
             $conex = new conexionMySQLi();
             $mysqli = $conex->conexion();
             //============================
-            $query = "CALL mod_puesto('".$correo."', '".$puesto."')";
+            $query = "CALL Usuario_mod_puesto('".$correo."', '".$puesto."')";
             if($mysqli->query($query)===TRUE){
                 return "Modificacion Existoso.";
             }else{
@@ -203,7 +203,7 @@
             $conex = new conexionMySQLi();
             $mysqli = $conex->conexion();
             //============================
-            $query = "CALL mod_nombre('".$correo."', '".$nom1."', '".$nom2."', '".$ape1."', '".$ape2."')";
+            $query = "CALL Usuario_mod_nombre('".$correo."', '".$nom1."', '".$nom2."', '".$ape1."', '".$ape2."')";
             if($mysqli->query($query)===TRUE){
                 return "Modificacion Existoso.";
             }else{
@@ -217,7 +217,7 @@
             $conex = new conexionMySQLi();
             $mysqli = $conex->conexion();
             //============================
-            $query = "CALL mod_curp('".$correo."', '".$curp."')";
+            $query = "CALL Usuario_mod_curp('".$correo."', '".$curp."')";
             if($mysqli->query($query)===TRUE){
                 return "Modificacion Existoso.";
             }else{
@@ -231,7 +231,7 @@
             $conex = new conexionMySQLi();
             $mysqli = $conex->conexion();
             //============================
-            $query = "CALL mod_rfc('".$correo."', '".$rfc."')";
+            $query = "CALL Usuario_mod_rfc('".$correo."', '".$rfc."')";
             if($mysqli->query($query)===TRUE){
                 return "Modificacion Existoso.";
             }else{
@@ -245,7 +245,7 @@
             $conex = new conexionMySQLi();
             $mysqli = $conex->conexion();
             //============================
-            $query = "CALL mod_apodo('".$correo."', '".$apodo."')";
+            $query = "CALL Usuario_mod_apodo('".$correo."', '".$apodo."')";
             if($mysqli->query($query)===TRUE){
                 return "Modificacion Existoso.";
             }else{
@@ -259,7 +259,7 @@
             $conex = new conexionMySQLi();
             $mysqli = $conex->conexion();
             //============================
-            $query = "CALL mod_Telefono('".$correo."', '".$telefono."')";
+            $query = "CALL Usuario_mod_Telefono('".$correo."', '".$telefono."')";
             if($mysqli->query($query)===TRUE){
                 return "Modificacion Existoso.";
             }else{
@@ -274,7 +274,21 @@
             $conex = new conexionMySQLi();
             $mysqli = $conex->conexion();
             //============================
-            $query = "CALL mod_direccion('".$correo."', '".$calle."', '".$entre."', '".$numCasa."', '".$col."', '".$codP."')";
+            $query = "CALL Usuario_mod_direccion('".$correo."', '".$calle."', '".$entre."', '".$numCasa."', '".$col."', '".$codP."')";
+            if($mysqli->query($query)===TRUE){
+                return "Modificacion Existoso.";
+            }else{
+                return "NO se puedo Modificar el registro: ".$mysqli->error;
+            }     
+            //============================
+        }
+        //#####################################################
+        public function Modimg($correo, $img){
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $query = "CALL Usuario_mod_Img('".$correo."', '".$img."')";
             if($mysqli->query($query)===TRUE){
                 return "Modificacion Existoso.";
             }else{

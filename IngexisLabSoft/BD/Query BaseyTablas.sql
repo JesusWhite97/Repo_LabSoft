@@ -32,9 +32,9 @@ use databaseingexis;
 -- );
 --======================================--
 -- create table clientes(
---     id_clientes     int             primary key     not null,
---     titulo          char(60),
---     nom_empr        char(60),
+--     id_clientes     int             primary key     not null    AUTO_INCREMENT,
+--     titulo          varchar(60),
+--     nom_empr        varchar(60),
 --     rfc             varchar(13), -- 4 0 3 letras, 6 numeros, 3 num o letras
 --     direc           varchar(100),
 --     cod_pos         varchar(10),
@@ -42,11 +42,10 @@ use databaseingexis;
 --     ciudad          varchar(30),
 --     nombre_contac   varchar(100),
 --     numero_contac   varchar(30),
---     email           varchar(50),
+--     email           varchar(50)     unique,
 --     nota            text,
 --     img             varchar(100),
 --     fecha_reg       date
 -- );
 --======================================--
-
 
