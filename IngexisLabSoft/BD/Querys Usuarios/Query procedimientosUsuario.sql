@@ -140,22 +140,38 @@ use databaseingexis;
 --         usuarios.id_usuario = id_usuario;
 -- end
 --======================================--
--- create procedure buscar_tar_usuarios(in apodo varchar(60))
+-- create procedure buscar_tar_usuarios(in texto varchar(60))
 -- begin
---     select * from dat_tar_Usuarios 
+--     select * 
+--     from 
+--         dat_tar_Usuarios 
 --     where 
---     dat_tar_usuarios.apodo like concat('%', apodo, '%') or dat_tar_usuarios.correo like concat('%', apodo, '%');
+--         dat_tar_usuarios.apodo like concat('%', texto, '%') or 
+--         dat_tar_usuarios.correo like concat('%', texto, '%') or
+--         dat_tar_usuarios.nombre like concat('%', texto, '%');
 -- end
 --======================================--
+-- create procedure Usuario_filtro_puesto(in puesto1 varchar(20), in puesto2 varchar(20), in puesto3 varchar(20), in puesto4 varchar(20))
+-- begin
+--     select * from dat_tar_usuarios
+--     WHERE 
+--         dat_tar_usuarios.puesto like concat('%', puesto1, '%') or
+--         dat_tar_usuarios.puesto like concat('%', puesto2, '%') or
+--         dat_tar_usuarios.puesto like concat('%', puesto3, '%') or
+--         dat_tar_usuarios.puesto like concat('%', puesto4, '%');
+-- end
+-- call Usuario_filtro_puesto('jefe de laboratorio','Laboratorista 1','-','-');
+--======================================--
 -- pendientes:
---      informacion de logeo                ✓✓✓✓✓✓✓✓✓
---      agregar usuarios                    ✓✓✓✓✓✓✓✓✓
---      eliminar usuarios                   ✓✓✓✓✓✓✓✓✓
---      datos para tajetas usuarios         ✓✓✓✓✓✓✓✓✓
---      buscador tarjetas usuarios          ✓✓✓✓✓✓✓✓✓
---      datos especifico para tarjeta       ✓✓✓✓✓✓✓✓✓
---      datos del usuario especifico        ✓✓✓✓✓✓✓✓✓
---      modificar usuarios (por seccion)    ✓✓✓✓✓✓✓✓✓
+--      informacion de logeo                                                ✓✓✓✓✓✓✓✓✓
+--      filtro por tipo de user varios al mismo tiempo (like por tipo user) ✓✓✓✓✓✓✓✓✓
+--      agregar usuarios                                                    ✓✓✓✓✓✓✓✓✓
+--      eliminar usuarios                                                   ✓✓✓✓✓✓✓✓✓
+--      datos para tajetas usuarios                                         ✓✓✓✓✓✓✓✓✓
+--      buscador tarjetas usuarios                                          ✓✓✓✓✓✓✓✓✓
+--      datos especifico para tarjeta                                       ✓✓✓✓✓✓✓✓✓
+--      datos del usuario especifico                                        ✓✓✓✓✓✓✓✓✓
+--      modificar usuarios (por seccion)                                    ✓✓✓✓✓✓✓✓✓
 --          +contraseña         ✓
 --          +puesto             ✓
 --          +datos_Nombre       ✓

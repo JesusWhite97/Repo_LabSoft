@@ -4,6 +4,7 @@ use databaseingexis;
 -- select 
 --     log_usuarios.img_log as 'img',
 --     usuarios.apodo as 'apodo',
+--     CONCAT(usuarios.nombre1, ' ', usuarios.nombre2, ' ', usuarios.Primer_ape, ' ', usuarios.Segund_ape) as 'nombre',
 --     usuarios.puesto as 'puesto',
 --     usuarios.Num_contacto as 'numero',
 --     log_usuarios.correo as 'correo'

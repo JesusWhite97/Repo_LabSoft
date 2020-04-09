@@ -98,13 +98,32 @@
 --     update clientes set clientes.img = Img where clientes.id_clientes = id_cliente;
 -- end
 --======================================--
+-- create procedure buscar_tar_Cliente(in texto varchar(100))
+-- begin
+-- 	select 
+-- 		clientes.img as 'img', 
+-- 		clientes.titulo as 'titulo', 
+-- 		clientes.rfc as 'rfc', 
+-- 		clientes.nombre_contac as 'nombreContac', 
+-- 		clientes.numero_contac as 'numeroContac', 
+-- 		clientes.email as 'correo'
+-- 	from 
+-- 		clientes
+-- 	where
+-- 		clientes.titulo like concat('%', texto, '%') or
+-- 		clientes.nombre_contac like concat('%', texto, '%') or
+-- 		clientes.email like concat('%', texto, '%') or
+-- 		clientes.nom_empr like concat('%', texto, '%');
+-- end
+--======================================--
 -- pendientes
 --     insertar clientes                ✓✓✓✓✓
+--     Busqueda                         ✓✓✓✓✓
 --     eliminar clientes                ✓✓✓✓✓
 --     lista de tarjetas de clientes    ✓✓✓✓✓
---     Modificacion especifica          ✓✓✓✓
+--     Modificacion especifica          ✓✓✓✓✓ 
 --         +nota                ✓
 --         +datos de contacto   ✓
 --         +datos basicos       ✓
 --         +direccion           ✓ 
---         +img                 
+-- 		   +img                 ✓
