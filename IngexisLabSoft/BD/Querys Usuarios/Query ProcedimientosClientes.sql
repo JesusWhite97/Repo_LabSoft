@@ -12,7 +12,7 @@
 --     in nombre_Contac    varchar(100),
 --     in numero_contac    varchar(30),
 --     in email            varchar(50),
---     in NATIONAL         text,
+--     in nota             text,
 --     in img              varchar(100),
 --     in fecha_reg        date
 -- )

@@ -2,7 +2,7 @@
     // ========================================================
     include 'conexion.php';
     // ========================================================
-    class procedimientos_BD{
+    class procedimientos_User{
         //#####################################################
         public function ExisteCorreo($correo){
             //crea Conexion===============
@@ -93,7 +93,7 @@
             //============================
             $query = "CALL eliminar_usuario('".$correo."')";
             if($mysqli->query($query)===TRUE){
-                return "eliminacion Existoso.";
+                return "eliminacion Existosa.";
             }else{
                 return "NO se puedo eliminar el registro: ".$mysqli->error;
             }     
@@ -297,14 +297,46 @@
             //============================
         }
         //#####################################################
-        public function Buscar_tarjetas_usuarios($apodo)
+        public function Buscar_tarjetas_usuarios($texto)
         {
             //crea Conexion===============
             $conex = new conexionMySQLi();
             $mysqli = $conex->conexion();
             //============================
             $salida = array();
-            $resultado = mysqli_query($mysqli, "call buscar_tar_usuarios('".$apodo."')");
+            $resultado = mysqli_query($mysqli, "call buscar_tar_usuarios('".$texto."')");
+            while ($rows = $resultado->fetch_assoc())
+            {
+                $salida[] = [
+                    "img"       => $rows["img"],
+                    "apodo"     => $rows["apodo"],
+                    "puesto"    => $rows["puesto"],
+                    "numero"    => $rows["numero"],
+                    "correo"    => $rows["correo"]
+                ];
+            }
+            return $salida;
+            $resultado->free();
+        }
+        //#####################################################
+        public function Filtro_tarjetas_puesto($puesto1, $puesto2 = null, $puesto3 = null, $puesto4 = null){
+            //crea Conexion===============
+            $conex = new conexionMySQLi();
+            $mysqli = $conex->conexion();
+            //============================
+            $salida = array();
+            if($puesto2 == null && $puesto3 == null && $puesto4 == null){
+                $resultado = mysqli_query($mysqli, "call Usuario_filtro_puesto('".$puesto1."', '-', '-', '-')");
+            }
+            else if($puesto3 == null && $puesto4 == null){
+                $resultado = mysqli_query($mysqli, "call Usuario_filtro_puesto('".$puesto1."', '".$puesto2."', '-', '-')");
+            }
+            else if($puesto4 == null){
+                $resultado = mysqli_query($mysqli, "call Usuario_filtro_puesto('".$puesto1."', '".$puesto2."', '".$puesto3."', '-')");
+            }
+            else{
+                $resultado = mysqli_query($mysqli, "call Usuario_filtro_puesto('".$puesto1."', '".$puesto2."', '".$puesto3."', '".$puesto4."')");
+            }
             while ($rows = $resultado->fetch_assoc())
             {
                 $salida[] = [
@@ -321,59 +353,62 @@
         //#####################################################
     }
     // ========================================================
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ExisteCorreo('Rtapiz@gmail.com');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ConfirmarContraseña('jesus120190240.8@gmail.com', '12e4');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->Id_por_Correo('meli@gmail.com');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->InfoLogin('meli@gmail.com');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->AgregarUsuario('Luis@gmail.com', '1234', 'noImg', 'Luis', 'Enrrique', 'Villavicencio', 'Lucero', '', '6128962147', 'Laboratorista 2', 'aaaa111111bccddd23', 'aaaa111111b2c', 'pitaya', 'mango,semilla', '564', 'indeco', '23071');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->EliminarUsuario('Luis@gmail.com');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ListaTarjetasUsuarios();
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->TrajetaEspecifica('Rtapiz@gmail.com');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->VistaPorUsuario('jesus120190240.8@gmail.com');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ModContra('jesus120190240.8@gmail.com', 'holis', 'holaMundo');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ModPuesto('jesus120190240.8@gmail.com', 'Jefe De Laboratorio');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ModNombre('Rtapiz@gmail.com', 'raul', 'jesus', 'ruiz', 'tapiz');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->Modcurp('Rtapiz@gmail.com', 'cccc111111bccddd23');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ModRFC('Rtapiz@gmail.com', 'cccc111111b2c');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ModApodo('Rtapiz@gmail.com', 'RTapiz');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ModTelefono('Rtapiz@gmail.com', '6124587766');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->ModDireccion('Rtapiz@gmail.com', 'forjadores', 'tec y la terminal', '101', 'Progreso', '24058');
     // var_dump($salida);
-    // $prueba = new procedimientos_BD();
+    // $prueba = new procedimientos_User();
     // $salida = $prueba->Buscar_tarjetas_usuarios('s');
+    // var_dump($salida);
+    // $prueba = new procedimientos_User();
+    // $salida = $prueba->Filtro_tarjetas_puesto('jefe de laboratorio', 'administrador');
     // var_dump($salida);
     // ========================================================
 ?>
