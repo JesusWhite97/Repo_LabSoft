@@ -35,20 +35,20 @@
             //============================
         }
         //#####################################################
-        public function Id_por_Correo($correo){
-            //crea Conexion===============
-            $conex = new conexionMySQLi();
-            $mysqli = $conex->conexion();
-            //============================
-            $salida = "";
-            $resultado = mysqli_query($mysqli, "select id_by_correo('".$correo."');");
-            $rows = $resultado->fetch_array();
-            $salida = $rows[0];
-            //============================
-            return $salida;
-            $resultado->free();
-            //============================
-        }
+        // public function Id_por_Correo($correo){
+        //     //crea Conexion===============
+        //     $conex = new conexionMySQLi();
+        //     $mysqli = $conex->conexion();
+        //     //============================
+        //     $salida = "";
+        //     $resultado = mysqli_query($mysqli, "select id_by_correo('".$correo."');");
+        //     $rows = $resultado->fetch_array();
+        //     $salida = $rows[0];
+        //     //============================
+        //     return $salida;
+        //     $resultado->free();
+        //     //============================
+        // }
         //#####################################################}
         public function InfoLogin($correo){
             //crea Conexion===============
@@ -79,9 +79,9 @@
             //============================
             $query = "CALL agregaUsuario('".$correo."', '".$contra."', '".$img."', '".$nom1."', '".$nom2."', '".$ape1."', '".$ape2."', '".$apodo."', '".$num."', '".$puesto."', '".$curp."', '".$rfc."', '".$calleP."', '".$entre."', '".$numCasas."', '".$col."', '".$codPost."')";
             if($mysqli->query($query)===TRUE){
-                return "Registro Existoso.";
+                return 'true';
             }else{
-                return "NO se puedo hacer el registro: ".$mysqli->error;
+                return "Error: ".$mysqli->error;
             }     
             //============================
         }
@@ -93,9 +93,9 @@
             //============================
             $query = "CALL eliminar_usuario('".$correo."')";
             if($mysqli->query($query)===TRUE){
-                return "eliminacion Existosa.";
+                return "true";
             }else{
-                return "NO se puedo eliminar el registro: ".$mysqli->error;
+                return "Error: ".$mysqli->error;
             }     
             //============================
         }
